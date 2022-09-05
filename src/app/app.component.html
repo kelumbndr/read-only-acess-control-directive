@@ -1,0 +1,43 @@
+<button mat-raised-button (click)="onEnableClick()">
+  {{enable? 'Enable': 'Disable'}}
+</button>
+
+<h3>Following button get hidden and click</h3>
+<div class="example-button-row">
+  <!--- oe button here is inversed you can use inversed buttons for closing items--->
+  <button
+    tcAccessControl
+    mat-raised-button
+    color="primary"
+    (click)="buttonClicked()"
+  >
+    Delete Item
+  </button>
+</div>
+
+<h3>Following button get visible(inversed) on read only mode</h3>
+<div class="example-button-row">
+  <button tcAccessControl [inverse]="true" mat-raised-button color="accent">
+    Accent
+  </button>
+</div>
+
+<h3>Following button get visible on read only mode</h3>
+<div class="example-button-row">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi" />
+    </mat-form-field>
+  </form>
+</div>
+
+<h3>Following button get visible on read only mode</h3>
+<div class="example-button-row">
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <button mat-raised-button color="warn">Warn</button>
+  <button mat-raised-button disabled>Disabled</button>
+  <a mat-raised-button routerLink=".">Link</a>
+</div>
